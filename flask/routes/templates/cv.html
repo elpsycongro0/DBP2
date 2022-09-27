@@ -1,0 +1,149 @@
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/Cvcss.css') }}">
+
+<div class="parent">
+  <div class="wide top">
+    <img src="{{ url_for('static',filename='images/pic1.jpg') }}">
+  </div>
+  <div class="narrow top">
+    <div class="parentVertical" style="justify-content: center;">
+      <div class="big">{{ datos["name"] }}</div>
+      <br/>
+      <div class="medium">PUESTO OCUPADO/BUSCANDO</div>
+    </div>
+    
+  </div>
+
+  <div class="break"></div>
+  <div class="wide" >
+    <div class="parentVertical ">
+      <div class="medium">CONTACTO</div>
+      <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+      <div class="small">
+        ✆  123 456 789<br>
+        ✉  {{ datos["mail"] }}<br>
+        📍  {{ datos["nacionality"] }}<br>
+        👶 {{ datos["birth"] }}<br>
+      </div>
+      <br>
+      <div class="medium">IDIOMAS</div>
+      <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+      <div class="small">
+        Español: Nativo<br>
+        Inglés: {{ datos["engLvl"] }}<br>
+      </div>
+      <br>
+      <div class="medium">LENGUAJES DE PROGRAMACIÓN</div>
+      <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+      <div class="small">
+        {% for item in datos["lang"] %}
+            ·  {{ item }}<br>
+        {% endfor %}
+      </div>
+      <br>
+      <div class="medium">APTITUDES</div>
+      <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+      <div class="small">
+        ·  {{ datos["aptitudes"] }}<br>
+      </div>
+      <br>
+      <div class="medium">HABILIDADES</div>
+      <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+      <div class="small">
+        {% for item in datos["habilidades"] %}
+            ·  {{ item }}<br>
+        {% endfor %}
+      </div>
+      <br>
+      <div class="medium">OTROS INTERESES</div>
+      <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+      <div class="small">
+        ·  Creador de yincanas<br>
+        ·  Paseos ecológicos grupales<br>
+        ·  Lectura grupal en inglés<br>
+      </div>
+      <br>
+    </div>
+  </div>
+  <div class="narrow">
+    <div class="parentVertical ">
+      <div class="medium">PERFIL</div>
+      <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+      <div class="small"> 
+        {{ datos["perfil"] }}
+      </div>
+      <br>
+      <div class="medium">EXPERIENCIA LABORAL</div>
+      <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+      <div class="medsmall">
+        <b>Trabajador Social</b><br>
+        <b><i>México DF,</i></b> | 2022 - Actualmente
+      </div>
+      <div class="small"> 
+        <ul>
+          <li>
+            Coordinador y mediador entre los equipos de ayuda psicológica a jóvenes y niños
+            en exclusión social
+          </li>
+          <li>
+            Velar por la salud mental del equipo y de miembros involucrados en proyectos
+          </li>
+          <li>
+            Mepeo de necesidades estrategicas y lógicas para las diferentes áreas 
+          </li>
+          <li>
+            Monitor de ejercicios físicos para adolescentes
+          </li>
+          <li>
+            Programar diferentes actividades extracurriculares en los involucrados
+          </li>
+        </ul> 
+      </div>
+      <div class="medsmall">
+        <b>Trabajador Social</b><br>
+        <b><i>México DF,</i></b> | 2020 - 2022
+      </div>
+      <div class="small"> 
+        <ul>
+          <li>
+            Funciones para seguimientos de casos para jóvenes con problemas de adicciones
+          </li>
+          <li>
+            Capacitaciones e integración vinculadas a medidas preventivas
+          </li>
+          <li>
+            Recopilación de evidencias para auditorías y programas sociales
+          </li>
+        </ul> 
+      </div>
+      <div class="medsmall">
+        <b>Trabajador Social (Prácticas)</b><br>
+        <b><i>México DF,</i></b> | 2019 - 2020
+      </div>
+      <div class="small"> 
+        <ul>
+          <li>
+            Profesor de lengua española e inglesa para jóvenes migrantes
+          </li>
+          <li>
+            Monitor de actividades ecológicas con adolescentes
+          </li>
+          <li>
+            Coordinador de áreas deportivas
+          </li>
+        </ul> 
+      </div>
+      <div class="medium">FORMACION</div>
+      <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+      <div class="medsmall">
+        <b>Grado de Trabajo Social</b><br>
+        <b><i>ESMA, </i>Madrid</b> | 2012 - 2015<br>
+        <br>
+        <b>Licenciatura Profesional</b><br>
+        <b><i>Universidad de la Frontera,</i>México DF</b> | 2011 - 2012<br>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+

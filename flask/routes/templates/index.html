@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejemplo1</title>
+  </head>
+  <body>
+    <p>Párrafo de ejemplo</p>
+    <form action="{{url_for('hello') }}" method="post">
+        <label>Nombre y Apellidos:</label><br>
+        <input type="text" name="name"><br>
+        <label>Fecha de Nacimiento:</label><br>
+        <input type="date" name="birth"><br>
+        <label>Contacto (telefono, email):</label><br>
+        <input type="text" name="mail"><br>
+        <label>Nacionalidad:</label><br>
+        <select name="nacionality">
+          <option value="Peruano">Peruano</option>
+          <option value="Arequipeño">Arequipeño</option>
+          <option value="Wakandiano">Wakandiano</option>
+          <option value="Queso">Queso</option>
+        </select><br>
+        <label>Nivel de ingles:</label><br>
+        <input type="radio" name="engLvl" value="Básico">
+        <label >Básico</label><br>
+        <input type="radio" name="engLvl" value="Medio">
+        <label >Medio</label><br>
+        <input type="radio" name="engLvl" value="Avanzado">
+        <label >Avanzado</label><br>
+        <label>Lenguajes de programación:</label><br>
+        <select name="lang" size="4" multiple>
+          <option value="C++">C++</option>
+          <option value="Python">Python</option>
+          <option value="Java">Java</option>
+          <option value="C#">C#</option>
+        </select><br>
+        <label>Aptitudes:</label><br>
+        <input list="aptitudes" name="aptitudes">
+        <datalist id="aptitudes">
+          <option value="Inteligencia emocional">
+          <option value="Espíritu crítico">
+          <option value="Trabajo en equipo">
+          <option value="Capacidad analítica">
+          <option value="Habilidades físicas">
+        </datalist><br>
+        <label>Habilidades:</label><br>
+        <input type="checkbox" id="hab1" name="habilidades" value="Acondicionamiento físico">
+        <label for="hab1"> Acondicionamiento físico</label><br>
+        <input type="checkbox" id="hab2" name="habilidades" value="Creación de videos deportivos">
+        <label for="hab2"> Creación de videos deportivos</label><br>
+        <input type="checkbox" id="hab3" name="habilidades" value="Pack office">
+        <label for="hab3"> Pack office</label><br>
+
+        <label>Perfil:</label><br>
+        <input type="textarea" name="perfil" rows="10" cols="30"><br>
+        <br>
+        <input type="submit" value="Submit">
+      </form> 
+
+  </body>
+</html>
