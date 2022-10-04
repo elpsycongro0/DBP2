@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/Cvcss.css') }}">
+    <script src="{{url_for('static', filename='cv.js')}}"></script>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="wide top">
+        <img src="{{ url_for('static',filename='images/pic1.jpg') }}">
+      </div>
+      <div class="narrow top">
+        <div class="parentVertical" style="justify-content: center;">
+          <div class="big">{{ datos["name"] }}</div>
+          <br/>
+          <div class="medium">PUESTO OCUPADO/BUSCANDO</div>
+        </div>
+       
+      </div>
+    
+      <div class="break"></div>
+      <div class="wide" >
+        <div class="parentVertical ">
+          <div class="medium">CONTACTO</div>
+          <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+          <div class="small">
+            ✆  123 456 789<br>
+            ✉  {{ datos["mail"] }}<br>
+            📍  {{ datos["nacionality"] }}<br>
+            👶 {{ datos["birth"] }}<br>
+          </div>
+          <br>
+          <div class="medium">IDIOMAS</div>
+          <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+          <div class="small">
+            Español: Nativo<br>
+            Inglés: {{ datos["engLvl"] }}<br>
+          </div>
+          <br>
+          <div class="medium">LENGUAJES DE PROGRAMACIÓN</div>
+          <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+          <div class="small">
+            {% for item in datos["lang"] %}
+                ·  {{ item }}<br>
+            {% endfor %}
+          </div>
+          <br>
+          <div class="medium">APTITUDES</div>
+          <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+          <div class="small">
+            ·  {{ datos["aptitudes"] }}<br>
+          </div>
+          <br>
+          <div class="medium">HABILIDADES</div>
+          <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+          <div class="small">
+            {% for item in datos["habilidades"] %}
+                ·  {{ item }}<br>
+            {% endfor %}
+          </div>
+          <br>
+          <div class="medium">OTROS INTERESES</div>
+          <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+          <div class="small">
+            ·  Creador de yincanas<br>
+            ·  Paseos ecológicos grupales<br>
+            ·  Lectura grupal en inglés<br>
+          </div>
+          <br>
+        </div>
+      </div>
+      <div class="narrow">
+        <div class="parentVertical" id="experiencia">
+          <div class="medium">PERFIL</div>
+          <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+          <div class="small">
+            {{ datos["perfil"] }}
+          </div>
+          <br>
+          <div class="medium">EXPERIENCIA LABORAL</div>
+          <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+          <form id="add-experience" method="POST" >
+            <input id="cargo" autocomplete="off" autofocus placeholder="Cargo" type="text">
+            <input id="lugar" autocomplete="off"  placeholder="Lugar" type="text">
+            <input id="periodo" autocomplete="off"  placeholder="Periodo" type="text">
+          </form>
+          <button id="submit">Enviar</button>
+          <div class="medsmall">
+            <b>Trabajador Social</b>
+            <br>
+            <b><i>México DF,</i></b> | 2022 - Actualmente
+          </div>
+          
+        </div>
+       
+      </div>
+    </div>
+  </body>
+</html>
+
