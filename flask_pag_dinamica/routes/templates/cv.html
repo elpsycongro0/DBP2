@@ -30,9 +30,12 @@
             👶 {{ datos["birth"] }}<br>
           </div>
           <br>
-          <div class="medium">IDIOMAS</div>
+          <div class="medium">
+            IDIOMAS
+            <button id="mas-idiomas">+</button>
+          </div>
           <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
-          <div class="small">
+          <div class="small" id="idiomas">
             Español: Nativo<br>
             Inglés: {{ datos["engLvl"] }}<br>
           </div>
@@ -45,15 +48,21 @@
             {% endfor %}
           </div>
           <br>
-          <div class="medium">APTITUDES</div>
+          <div class="medium">
+            APTITUDES
+            <button id="mas-aptitudes">+</button>
+          </div>
           <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
-          <div class="small">
+          <div class="small" id="aptitudes">
             ·  {{ datos["aptitudes"] }}<br>
           </div>
           <br>
-          <div class="medium">HABILIDADES</div>
+          <div class="medium">
+            HABILIDADES
+            <button id="mas-habilidades">+</button>
+          </div>
           <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
-          <div class="small">
+          <div class="small" id="habilidades">
             {% for item in datos["habilidades"] %}
                 ·  {{ item }}<br>
             {% endfor %}
@@ -70,27 +79,39 @@
         </div>
       </div>
       <div class="narrow">
-        <div class="parentVertical" id="experiencia">
+        <div class="parentVertical">
           <div class="medium">PERFIL</div>
           <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
           <div class="small">
             {{ datos["perfil"] }}
           </div>
           <br>
-          <div class="medium">EXPERIENCIA LABORAL</div>
-          <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
-          <form id="add-experience" method="POST" >
-            <input id="cargo" autocomplete="off" autofocus placeholder="Cargo" type="text">
-            <input id="lugar" autocomplete="off"  placeholder="Lugar" type="text">
-            <input id="periodo" autocomplete="off"  placeholder="Periodo" type="text">
-          </form>
-          <button id="submit">Enviar</button>
-          <div class="medsmall">
-            <b>Trabajador Social</b>
-            <br>
-            <b><i>México DF,</i></b> | 2022 - Actualmente
+          <div id="experiencia">
+            <div class="medium">
+              EXPERIENCIA LABORAL
+              <button id="mas-experiencia">+</button>
+            </div>
+            <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+            <div class="medsmall">
+              <b>Trabajador Social</b>
+              <br>
+              <b><i>México DF,</i></b> | 2022 - Actualmente
+            </div>
           </div>
-          
+          </br>
+          <div id="formacion">
+            <div class="medium">
+              FORMACION
+              <button id="mas-formacion">+</button>
+            </div>
+            <hr style="height:2px;color:black;background-color:black;width:100%;text-align:left;margin-left:0">
+            <div class="medsmall">
+              <b>Grado de Trabajo Social</b>
+              <br>
+              <b><i>ESMA, Madrid</i></b> | 2012 - 2015
+            </div>
+          </div>
+
         </div>
        
       </div>

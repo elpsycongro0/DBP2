@@ -6,7 +6,6 @@
     <script src="{{url_for('static', filename='validation.js')}}"></script>
   </head>
   <body>
-    <p>Párrafo de ejemplo</p>
     <form action="{{url_for('hello') }}" method="post">
         <label>Nombre y Apellidos:(obligatorio)</label><br>
         <input class="checked_empty" type="text" name="name" required><br>
@@ -15,28 +14,28 @@
         <label>Email(obligatorio):</label><br>
         <input class="checked_empty" type="text" name="mail" required><br>
         <label>Nacionalidad:</label><br>
-        <select name="nacionality" required>
+        <select class="checked_empty" name="nacionality" required>
           <option value="Peruano">Peruano</option>
           <option value="Arequipeño">Arequipeño</option>
           <option value="Wakandiano">Wakandiano</option>
           <option value="Queso">Queso</option>
         </select><br>
         <label>Nivel de ingles:</label><br>
-        <input type="radio" name="engLvl" value="Básico" required>
+        <input class="checked_empty" type="radio" name="engLvl" value="Básico" required>
         <label >Básico</label><br>
         <input type="radio" name="engLvl" value="Medio" >
         <label >Medio</label><br>
         <input type="radio" name="engLvl" value="Avanzado" >
         <label >Avanzado</label><br>
         <label>Lenguajes de programación:</label><br>
-        <select name="lang" size="4" multiple required>
+        <select class="checked_empty" name="lang" size="4" multiple required>
           <option value="C++">C++</option>
           <option value="Python">Python</option>
           <option value="Java">Java</option>
           <option value="C#">C#</option>
         </select><br>
         <label>Aptitudes:</label><br>
-        <input list="aptitudes" name="aptitudes" required>
+        <input class="checked_empty" list="aptitudes" name="aptitudes" required>
         <datalist id="aptitudes">
           <option value="Inteligencia emocional">
           <option value="Espíritu crítico">
@@ -53,7 +52,7 @@
         <label for="hab3"> Pack office</label><br>
 
         <label>Perfil:</label><br>
-        <input type="textarea" name="perfil" rows="10" cols="30" required><br>
+        <input class="checked_empty" type="textarea" name="perfil" rows="10" cols="30" required><br>
         <br>
         <input type="submit" id="submit" value="Submit">
       </form>
