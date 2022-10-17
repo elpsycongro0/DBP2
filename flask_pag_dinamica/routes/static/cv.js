@@ -172,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         input1.setAttribute('autocomplete','off');
         input1.setAttribute('placeholder','Idioma');
         input1.setAttribute('type','text');
+        input1.classList.add("language-input");
         experienceForm.appendChild(input1);
 
         const input2 = document.createElement('input');
@@ -179,13 +180,27 @@ document.addEventListener('DOMContentLoaded', () => {
         input2.setAttribute('autocomplete','off');
         input2.setAttribute('placeholder','Nivel');
         input2.setAttribute('type','text');
+        input2.classList.add("language-input");
         experienceForm.appendChild(input2);
 
         const submitButton = document.createElement('button');
         submitButton.innerHTML +='Enviar';
+        submitButton.disabled = true;
         myDiv.appendChild(submitButton);
         
         document.querySelector('#idiomas').appendChild(myDiv);
+        inputList = document.querySelectorAll('.language-input');
+        inputList.forEach(input => {
+            input.onchange = () => {
+                disabledSubmit = false;
+                for(var i=0; i<inputList.length; i++){
+                    if(inputList[i].value.length == 0){
+                        disabledSubmit = true;
+                    }
+                }
+                submitButton.disabled = disabledSubmit;
+            }
+        });
         
         submitButton.onclick = () => {
             const maindiv = document.createElement("div");
