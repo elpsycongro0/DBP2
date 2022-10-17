@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         input1.setAttribute('autocomplete','off');
         input1.setAttribute('placeholder','Cargo');
         input1.setAttribute('type','text');
+        input1.classList.add("experience-input");
         experienceForm.appendChild(input1);
 
         const input2 = document.createElement('input');
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         input2.setAttribute('autocomplete','off');
         input2.setAttribute('placeholder','Lugar');
         input2.setAttribute('type','text');
+        input2.classList.add("experience-input");
         experienceForm.appendChild(input2);
 
         const input3 = document.createElement('input');
@@ -31,14 +33,29 @@ document.addEventListener('DOMContentLoaded', () => {
         input3.setAttribute('autocomplete','off');
         input3.setAttribute('placeholder','Periodo');
         input3.setAttribute('type','text');
+        input3.classList.add("experience-input");
         experienceForm.appendChild(input3);
 
         const submitButton = document.createElement('button');
         submitButton.setAttribute('id','submit');
         submitButton.innerHTML +='Enviar';
+        submitButton.disabled = true;
         myDiv.appendChild(submitButton);
         
         document.querySelector('#experiencia').appendChild(myDiv);
+
+        inputList = document.querySelectorAll('.experience-input');
+        inputList.forEach(input => {
+            input.onchange = () => {
+                disabledSubmit = false;
+                for(var i=0; i<inputList.length; i++){
+                    if(inputList[i].value.length == 0){
+                        disabledSubmit = true;
+                    }
+                }
+                submitButton.disabled = disabledSubmit;
+            }
+        });
         
         submitButton.onclick = () => {
             const experienceInstance = document.createElement("div");
@@ -78,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         input1.setAttribute('autocomplete','off');
         input1.setAttribute('placeholder','Grado');
         input1.setAttribute('type','text');
+        input1.classList.add("formation-input");
         experienceForm.appendChild(input1);
 
         const input2 = document.createElement('input');
@@ -85,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         input2.setAttribute('autocomplete','off');
         input2.setAttribute('placeholder','Lugar');
         input2.setAttribute('type','text');
+        input2.classList.add("formation-input");
         experienceForm.appendChild(input2);
 
         const input3 = document.createElement('input');
@@ -92,14 +111,29 @@ document.addEventListener('DOMContentLoaded', () => {
         input3.setAttribute('autocomplete','off');
         input3.setAttribute('placeholder','Periodo');
         input3.setAttribute('type','text');
+        input3.classList.add("formation-input");
         experienceForm.appendChild(input3);
 
         const submitButton = document.createElement('button');
         submitButton.setAttribute('id','submit');
         submitButton.innerHTML +='Enviar';
+        submitButton.disabled = true;
         myDiv.appendChild(submitButton);
-        
+
         document.querySelector('#formacion').appendChild(myDiv);
+        
+        inputList = document.querySelectorAll('.formation-input');
+        inputList.forEach(input => {
+            input.onchange = () => {
+                disabledSubmit = false;
+                for(var i=0; i<inputList.length; i++){
+                    if(inputList[i].value.length == 0){
+                        disabledSubmit = true;
+                    }
+                }
+                submitButton.disabled = disabledSubmit;
+            }
+        });
         
         submitButton.onclick = () => {
             const experienceInstance = document.createElement("div");
@@ -180,7 +214,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const submitButton = document.createElement('button');
         submitButton.innerHTML +='Enviar';
+        submitButton.disabled = true;
         myDiv.appendChild(submitButton);
+
+        input1.onchange = () => {
+            if(input1.value == ""){
+                submitButton.disabled = true;
+            }
+            else{
+                submitButton.disabled = false;
+            }
+        };
         
         document.querySelector('#aptitudes').appendChild(myDiv);
         
@@ -211,8 +255,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const submitButton = document.createElement('button');
         submitButton.innerHTML +='Enviar';
+        submitButton.disabled = true;
         myDiv.appendChild(submitButton);
         
+        input1.onchange= ()=>{
+            if(input1.value == ""){
+                submitButton.disabled = true;
+            }
+            else{
+                submitButton.disabled = false
+            }
+        };
+
         document.querySelector('#habilidades').appendChild(myDiv);
         
         submitButton.onclick = () => {
