@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.pdfView"
+             xmlns:viewer="clr-namespace:Syncfusion.SfPdfViewer.XForms;assembly=Syncfusion.SfPdfViewer.XForms">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <viewer:SfPdfViewer x:Name="pdfViewerControl" 
+                Grid.Row="0"/>
+
+            <StackLayout BackgroundColor="Black" Padding="5,5,0,0" Orientation="Horizontal"
+                             Grid.Row="1">
+                <Entry x:Name="email" Placeholder="Enviar a email" HorizontalOptions="FillAndExpand"/>
+                <Button Text="enviar" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>
