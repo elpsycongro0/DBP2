@@ -1,0 +1,7 @@
+﻿<DataTemplate xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="App2.ListItemView">
+    <Label 
+           Text="{Binding ., Mode=OneWay}" TextColor="Black"
+        />
+</DataTemplate>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.MainPage">
+    <ScrollView>
+    <StackLayout Spacing="3" Padding="15">
+        <Label Text="Nombre" FontSize="Medium" />
+        <Entry Text="{Binding SelectedName, Mode=TwoWay}" FontSize="Medium" />
+        <Label Text="Nacimiento" FontSize="Medium" />
+        <DatePicker Date="{Binding SelectedDate, Mode=TwoWay}" Format="MMMM dd, yyyy"/>
+        <Label Text="Email" FontSize="Medium" />
+        <Entry Text="{Binding Email}" Keyboard="Email" FontSize="Medium" />
+        <Label Text="Nacionalidad" FontSize="Medium" />
+        <Picker Title="Selecciona una nacionalidad"
+        ItemsSource="{Binding NamesListObsv}"
+        ItemDisplayBinding="{Binding .}"
+        SelectedItem="{Binding Nationality}"
+        FontAttributes="Italic"
+        FontSize="24"/>
+        
+        <Label Text="Idiomas" FontSize="Medium" />
+        <StackLayout Orientation="Horizontal">
+            <Entry Text="{Binding IdiomaEntry}" Placeholder="Idioma" FontSize="Medium" HorizontalOptions="FillAndExpand"/>
+            <Entry Text="{Binding IdiomaEntryNivel}" Placeholder="Nivel" FontSize="Medium" HorizontalOptions="FillAndExpand"/>
+            <Button Text="+" Command="{Binding OnSaveIdioma}"></Button>
+        </StackLayout>
+        <StackLayout BindableLayout.ItemsSource="{Binding IdiomasListObsv}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate >
+                    <Label Text="{Binding ., Mode=OneWay}" />
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+
+
+        <Label Text="Lenguajes de programación" FontSize="Medium" />
+        <StackLayout Orientation="Horizontal">
+            <Entry Text="{Binding Lenguaje}" Placeholder="Lenguaje" FontSize="Medium" HorizontalOptions="FillAndExpand"/>
+            <Button Text="+" Command="{Binding OnSaveLenguajeProg}"></Button>
+        </StackLayout>
+
+        <StackLayout BindableLayout.ItemsSource="{Binding LenguajesProgListObsv}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate >
+                    <Label Text="{Binding ., Mode=OneWay}" />
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+
+        <Label Text="Experiencia" FontSize="Medium" />
+        <StackLayout Orientation="Vertical">
+            <Entry Text="{Binding Cargo}" Placeholder="Cargo" FontSize="Medium" HorizontalOptions="FillAndExpand"/>
+            <Entry Text="{Binding Lugar}" Placeholder="Lugar" FontSize="Medium" HorizontalOptions="FillAndExpand"/>
+            <Entry Text="{Binding Periodo}" Placeholder="Periodo" FontSize="Medium" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Agregar Experiencia" Command="{Binding OnSaveExperiencia}"></Button>
+        </StackLayout>
+        <StackLayout BindableLayout.ItemsSource="{Binding ExperienciaProgListObsv}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate >
+                    <Label Text="{Binding ., Mode=OneWay}" />
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+        <Label Text="Perfil" FontSize="Medium" />
+        <Editor Text="{Binding Perfil}" Placeholder="Detalle su perfil"/>
+        
+        <StackLayout Orientation="Horizontal">
+            <Button Background="blue" Text="generar cv" Command="{Binding OnGenerateCv}" HorizontalOptions="FillAndExpand"></Button>
+        </StackLayout>
+        
+        
+    </StackLayout>
+    </ScrollView>
+
+</ContentPage>

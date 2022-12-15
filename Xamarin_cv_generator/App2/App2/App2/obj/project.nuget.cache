@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "oNNaSdUlYJcBgOFV/jEpHMMZDM0Wkgi8UZ66zT86hEkgp7ooqaAPgOmRl56pcs8WygDh/GCv4ZDfS9OzcXA9KQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ADMIN\\source\\repos\\App2\\App2\\App2\\App2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.licensing\\20.3.0.61\\syncfusion.licensing.20.3.0.61.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.compression\\20.3.0.61\\syncfusion.xamarin.compression.20.3.0.61.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.core\\20.3.0.61\\syncfusion.xamarin.core.20.3.0.61.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.pdf\\20.3.0.61\\syncfusion.xamarin.pdf.20.3.0.61.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.sfbusyindicator\\20.3.0.61\\syncfusion.xamarin.sfbusyindicator.20.3.0.61.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.sfpdfviewer\\20.3.0.61\\syncfusion.xamarin.sfpdfviewer.20.3.0.61.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.sfprogressbar\\20.3.0.61\\syncfusion.xamarin.sfprogressbar.20.3.0.61.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.sfrangeslider\\20.3.0.61\\syncfusion.xamarin.sfrangeslider.20.3.0.61.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

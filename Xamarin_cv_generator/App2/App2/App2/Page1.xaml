@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:App2" xmlns:views1="clr-namespace:App2"
+             x:Class="App2.Page1">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Grid
+            AbsoluteLayout.LayoutBounds="0,0,1,1"    
+            AbsoluteLayout.LayoutFlags="HeightProportional, WidthProportional"    
+            BackgroundColor="#585858">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="4*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <ContentView Padding="0,30,0,30" VerticalOptions="FillAndExpand"
+                Grid.Row="0" Grid.Column="0" >
+                    <Image Source="pic1.jpg" VerticalOptions="Center" HeightRequest="64" />
+                </ContentView>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" 
+                Grid.Row="0" Grid.Column="1">
+                    <Label Text="{Binding name}" FontSize="Large" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
+                       Grid.Row="1" Grid.Column="1"/>
+                    <Label Text="PUESTO OCUPADO/BUSCANDO" FontSize="Small" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
+                       Grid.Row="1" Grid.Column="1"/>
+                </StackLayout>
+
+                <StackLayout BackgroundColor="White" Padding="5,5,0,0"
+                Grid.Row="1" Grid.Column="0">
+                    <Label Text="CONTACTO" TextColor="Black" FontAttributes="Bold" TextDecorations="Underline"/>
+                    <Label Text="telefono: 123 456 789" TextColor="Black"/>
+                    <Label Text="{Binding email}" TextColor="Black"/>
+                    <Label Text="{Binding nationality}" TextColor="Black"/>
+                    <Label Text="{Binding date}" TextColor="Black"/>
+                    <Label Text="IDIOMAS" TextColor="Black" FontAttributes="Bold" TextDecorations="Underline"/>
+
+                    <StackLayout BindableLayout.ItemsSource="{Binding IdiomasListObsv}">
+                        <BindableLayout.ItemTemplate>
+                            <views:ListItemView />
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+
+                    <Label Text="LENGUAJES DE PROGRAMACIÓN" TextColor="Black" FontAttributes="Bold" TextDecorations="Underline"/>
+                    <StackLayout BindableLayout.ItemsSource="{Binding LenguajesProgListObsv}">
+                        <BindableLayout.ItemTemplate>
+                            <views:ListItemView />
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                    
+                    <Label Text="APTITUDES" TextColor="Black" FontAttributes="Bold" TextDecorations="Underline"/>
+                    <Label Text="Espíritu crítico" TextColor="Black"/>
+                    <Label Text="HABILIDADES " TextColor="Black" FontAttributes="Bold" TextDecorations="Underline"/>
+                    <Label Text="Acondicionamiento físico" TextColor="Black"/>
+
+                </StackLayout>
+                <StackLayout BackgroundColor="White" Padding="5,5,0,0"
+                Grid.Row="1" Grid.Column="1">
+                    <Label Text="PERFIL" TextColor="Black" FontAttributes="Bold" TextDecorations="Underline"/>
+                    <Label Text="{Binding perfil}" TextColor="Black"/>
+                    <Label Text="EXPERIENCIA LABORAL" TextColor="Black" FontAttributes="Bold" TextDecorations="Underline"/>
+                    <StackLayout BindableLayout.ItemsSource="{Binding ExperienciaProgListObsv}">
+                        <BindableLayout.ItemTemplate>
+                            <views:ListItemView />
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejemplo1</title>
+    
+  </head>
+  <body>
+    <h1>FANTASTIC DETECTION!</h1>
+    
+    <form action="{{ url_for('handle_detection') }}" method="POST" target="dummyframe" enctype=multipart/form-data >
+        <label>Image for detection: </label><br>
+        <input type="file" name="image"><br>
+        <input type="submit" value="DETECT!"><br>
+    </form>
+    <iframe name="dummyframe" id="dummyframe" style="
+      height: 30px;
+      "></iframe>
+    <div>
+      <form action="{{ url_for('search') }}" method="GET">
+        <input type="text" name="search_key">
+        <input type="submit" value="search"><br>
+      </form>
+      <table>
+        {% for item in data %}
+          <tr>
+            <th>
+              <a href="{{ url_for('static',filename='images/'+item[0]) }}">i</a>
+            </th>
+          {% for field in item %}
+            <th>{{ field }}</th>
+          {% endfor %}
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </body>
+</html>
